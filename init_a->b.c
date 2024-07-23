@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 17:39:45 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/22 16:12:46 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/23 17:05:57 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static void	ft_a_target(t_stack_node *a, t_stack_node *b)
 		if (smaller_target == LONG_MIN)
 			a->target = max_nbr(b);
 		else
-			a->target = smaller_target;
+			a->target = target;
 		a = a->next;
 	}
 }
