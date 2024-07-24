@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 17:34:21 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/02 17:47:40 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:50:04 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,17 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || argc == 2 && !argv[1][0])
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
-	init_stack_a (*a, *b);
+	ft_init_stack_a(&a, argv);
+	if (!ft_sorted(a))
+	{
+		if (length(a) == 2)
+			sa(&a);
+		else if (length(a) == 3)
+			sort_three(&a);
+		else
+			sort_stacks(&a, &b);
+	}
+	ft_free_stack(&a);
 }

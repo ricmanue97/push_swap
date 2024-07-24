@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:55:02 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/18 14:03:20 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 10:41:43 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,21 +48,21 @@ void	ft_free_stack(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
 
-	if (!stack)
+	if (!*stack)
 		return ;
-	tmp = stack;
+	tmp = *stack;
 	while (tmp)
 	{
 		tmp = tmp->next;
-		free(stack);
-		stack = tmp;
+		free(*stack);
+		*stack = tmp;
 	}
 	*stack = NULL;
 }
 
-void	ft_error_handle(t_stack_node *stack)
+void	ft_error_handle(t_stack_node **stack)
 {
-	free_stack(stack);
+	ft_free_stack(stack);
 	write (1, "error", 6);
 	exit (1);
 }

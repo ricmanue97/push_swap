@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:12:42 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/22 16:12:05 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:56:46 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void	ft_prep_push_a(t_stack_node **a, t_stack_node *target_node)
 {
 	if (target_node->higher_median)
-		ra(*a);
+		ra(a);
 	else
-		rra(*a);
+		rra(a);
 }
 
 void	ft_prep_push_b(t_stack_node **b, t_stack_node *target_node)
 {
 	if (target_node->higher_median)
-		rb(*b);
+		rb(b);
 	else
-		rrb(*b);
+		rrb(b);
 }
 
 void	ft_min_to_top(t_stack_node **a)

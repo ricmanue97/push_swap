@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:54:32 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/18 14:03:34 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:45:17 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,16 @@ void	ft_init_stack_a(t_stack_node **a, char **argv)
 	long	nbr;
 
 	i = 0;
-	while (argv[i] != '\0')
+	while (argv[i] != NULL)
 	{
-		if (input_error(argv[i]) == 1)
-			error_handle(a);
-		nbr = atol(argv[i]);
+		if (ft_input_error(argv[i]) == 1)
+			ft_error_handle(a);
+		nbr = ft_atol(argv[i]);
 		if (nbr < INT_MIN && nbr > INT_MAX)
-			error_handle(a);
-		if (dup_error(*a, nbr) == 1)
-			error_handle(a);
-		add_node(a, nbr);
+			ft_error_handle(a);
+		if (ft_dup_error(*a, nbr) == 1)
+			ft_error_handle(a);
+		ft_add_node(a, nbr);
 		i++;
 	}
 }

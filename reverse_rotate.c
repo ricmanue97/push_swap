@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 10:12:45 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/18 14:04:31 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:50:59 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,24 @@ static void	ft_reverse_rotate(t_stack_node **stack)
 	*stack = tmp2;
 }
 
-void	ft_rra(t_stack_node **a)
+void	rra(t_stack_node **a)
 {
 	ft_reverse_rotate(a);
 	write(1, "rra", 3);
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }
 
-void	ft_rrb(t_stack_node **b)
+void	rrb(t_stack_node **b)
 {
 	ft_reverse_rotate(b);
 	write(1, "rrb", 3);
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }
 
-void	ft_rrr(t_stack_node **a, t_stack_node **b)
+void	rrr(t_stack_node **a, t_stack_node **b)
 {
 	ft_reverse_rotate(a);
 	ft_reverse_rotate(b);
 	write(1, "rrr", 3);
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }

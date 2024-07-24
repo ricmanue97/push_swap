@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 11:50:48 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/23 14:38:24 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/24 11:55:40 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_move_a_to_b(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
 
-	cheapest_node = ft_cheapest(*a);
+	cheapest_node = ft_set_cheapest(*a);
 	if (cheapest_node->higher_median && cheapest_node->target->higher_median)
 		ft_rev_rotate_both(a, b, cheapest_node);
 	else
@@ -54,7 +54,7 @@ static void	ft_move_b_to_a(t_stack_node **b, t_stack_node **a)
 
 void	sort_stacks(t_stack_node **a, t_stack_node **b)
 {
-	int len;
+	int	len;
 
 	len = length(*a);
 	if (len > 3 && !ft_sorted(*a))
@@ -63,15 +63,15 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 		pb(a, b);
 	while (len > 3 && !ft_sorted(*a))
 	{
-		ft_prep_stack_a(a, b);
+		ft_prep_stack_a(*a, *b);
 		ft_move_a_to_b(a, b);
 	}
-	sort_three(*a);
+	sort_three(a);
 	while (*b)
 	{
-		ft_prep_stack_a(a, b);
+		ft_prep_stack_a(*a, *b);
 		ft_move_b_to_a(b, a);
 	}
-	ft_index(a);
+	ft_index(*a);
 	ft_min_to_top(a);
 }
