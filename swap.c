@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 10:59:00 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/24 11:51:27 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 16:18:25 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,21 @@
 
 void	ft_swap(t_stack_node **stack)
 {
-	t_stack_node	*tmp;
+	t_stack_node	*first;
+	t_stack_node	*second;
+
+	if (!*stack || !(*stack)->next)
+		return ;
+	first = (*stack)->next;
+	second = *stack;
+	second->next = first->next;
+	if (first->next)
+		first->next->prev = second;
+	second->prev = first;
+	first->next = second;
+	first->prev = NULL;
+	*stack = first;
+/* 	t_stack_node	*tmp;
 	t_stack_node	*tmp2;
 
 	if (!*stack || !(*stack)->next)
@@ -24,7 +38,7 @@ void	ft_swap(t_stack_node **stack)
 	tmp2->next->prev = tmp;
 	tmp2->next = tmp;
 	tmp2->prev = NULL;
-	*stack = tmp2;
+	*stack = tmp2; */
 }
 
 void	sa(t_stack_node **a)

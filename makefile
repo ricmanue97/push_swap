@@ -6,7 +6,7 @@
 #    By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/24 10:31:38 by ricmanue          #+#    #+#              #
-#    Updated: 2024/07/24 11:00:29 by ricmanue         ###   ########.fr        #
+#    Updated: 2024/07/25 11:14:37 by ricmanue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,15 +20,18 @@ CFLAGS	=	-Wall -Werror -Wextra
 OBJS	=	${SRCS:.c=.o}
 RM	=	@rm -f
 
-${NAME}: ${OBJS}
-	@echo "Created .o files."
-	${CC} ${NAME} ${OBJS}
-
 all: ${NAME}
+
+${NAME}: ${OBJS}
+	@echo "Created .o files and executable."
+	${CC} ${OBJS} -o ${NAME}
+
+%.o: %.c
+	${CC} ${CFLAGS} -c $^ -o $@
 
 fclean: clean
 	${RM} ${NAME}
-	@echo "Cleaned"
+	@echo "Cleaned executable."
 
 clean:
 	${RM} -f ${OBJS}

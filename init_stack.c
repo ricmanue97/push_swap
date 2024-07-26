@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:54:32 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/24 11:45:17 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 16:15:11 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	ft_add_node(t_stack_node **a, int nbr)
 		return ;
 	node->next = NULL;
 	node->nbr = nbr;
-	if (!(*a))
+	if (*a == NULL)
 	{
 		*a = node;
 		node->prev = NULL;
@@ -65,7 +65,7 @@ void	ft_init_stack_a(t_stack_node **a, char **argv)
 	int		i;
 	long	nbr;
 
-	i = 0;
+	i = 1;
 	while (argv[i] != NULL)
 	{
 		if (ft_input_error(argv[i]) == 1)

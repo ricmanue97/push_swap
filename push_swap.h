@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 15:36:21 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/24 11:49:32 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 13:15:55 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 typedef struct s_stack_node
 {
-	int					nbr;
+	long				nbr;
 	int					index;
 	int					cost;
 	bool				higher_median;

@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 14:14:57 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/24 11:27:40 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 16:18:54 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	sort_three(t_stack_node **a)
 		rra(a);
 	if ((*a)->nbr > (*a)->next->nbr)
 		sa(a);
+
 }

@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 17:34:21 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/24 11:50:04 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 16:18:48 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ int	main(int argc, char **argv)
 			sort_three(&a);
 		else
 			sort_stacks(&a, &b);
+	}
+	while (a)
+	{
+		printf("%ld\n", a->nbr);
+		a = a->next;
 	}
 	ft_free_stack(&a);
 }

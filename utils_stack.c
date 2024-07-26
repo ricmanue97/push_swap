@@ -6,7 +6,7 @@
 /*   By: ricmanue < ricmanue@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:25:46 by ricmanue          #+#    #+#             */
-/*   Updated: 2024/07/22 16:12:30 by ricmanue         ###   ########.fr       */
+/*   Updated: 2024/07/26 13:27:52 by ricmanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_stack_node	*last_node(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
-	while (stack)
+	while (stack->next != NULL)
 		stack = stack->next;
 	return (stack);
 }
@@ -62,9 +62,9 @@ t_stack_node	*max_nbr(t_stack_node *stack)
 	long			big_target;
 
 	big_target = LONG_MIN;
-	while (stack)
+	while (stack != NULL)
 	{
-		if (stack->nbr < big_target)
+		if (stack->nbr > big_target)
 		{
 			big_target = stack->nbr;
 			max_node = stack;
