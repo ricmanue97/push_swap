@@ -11,6 +11,8 @@ sa : swap a - swap the first 2 elements at the top of stack a. Do nothing if the
 sb : swap b - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements).
 
 ss : sa and sb at the same time.
+![image](https://github.com/user-attachments/assets/27a766fe-6856-4419-adff-d016966b2b06)
+
 
 pa : push a - take the first element at the top of b and put it at the top of a. Do nothing if b is empty.
 
