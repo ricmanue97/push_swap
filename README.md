@@ -42,12 +42,8 @@ rrr : rra and rrb at the same time.
 
 At the end, stack b must empty empty and all integers must be in stack a, sorted in ascending order. The challenge of this project is really teaching you that we not only have to code, but we also need to optimize every aspect of our code, in order to have the fastest and smoothest experience.
 
-In order to do this i used an algorithm called turk algorithm ,i will link an article on it after, which the base idea is to have on stack A 3 numbers and order them in ascending order, and when sending numbers to stack B, sending them in descending order. Because the objective is to have every number on stack A everything needs to be sent back from stack B to stack A afterwards. As said above part of the ojective is to have a really optimized program, for this i needed to add a new concept to my programm, the Cost, which in these case basically is the number of moves i need to make in order to do something, lets see the following example:
-
-![Screenshot 2024-07-29 at 18 37 21](https://github.com/user-attachments/assets/a48932f6-e2fd-44b4-86db-2c424a3dfd67)
-
-In this case i want to know how much it would cost to put 2 in the right spot, that being after the number 1. 
-I can see that in order to do that all i need is to PA and SA, so the cost would be 2. This is what it's going to  determine which step i am taking next.
+In order to do this i used an algorithm called turk algorithm ,i will link an article on it after, which the base idea is to have on stack A 3 numbers and order them in ascending order, and when sending numbers to stack B, sending them in descending order.
+https://medium.com/@ayogun/push-swap-c1f5d2d41e97
 
 
 
