@@ -30,7 +30,7 @@ rrr : rra and rrb at the same time.
 
 At the end, stack b must empty empty and all integers must be in stack a, sorted in ascending order. The challenge of this project is really teaching you that we not only have to code, but we also need to optimize every aspect of our code, in order to have the fastest and smoothest experience.
 
-In order to do this i used 
+In order to do this i used an algorithm called turk algorithm ,i will link an article on it after, which the base idea is to have on stack a 3 numbers and organise it, and when sending numbers to stack B, sending them in descending order.
 
 Bonus Part
 Make a checker program that verifies if a certain set of commands, given by standard input, sorts the integers given.
