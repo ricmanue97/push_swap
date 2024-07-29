@@ -46,7 +46,7 @@ In order to do this i used an algorithm called turk algorithm ,i will link an ar
 
 ![Screenshot 2024-07-29 at 18 37 21](https://github.com/user-attachments/assets/a48932f6-e2fd-44b4-86db-2c424a3dfd67)
 
-In this case i want to know how much it would cost to put 2 in the right spot, that being after the number 1, i can see that in order to do that all i need is to PA and SA, so the cost would be 2, this is whgat its gonna determine which step i am going to next.
+In this case i want to know how much it would cost to put 2 in the right spot, that being after the number 1, i can see that in order to do that all i need is to PA and SA, so the cost would be 2, this is what its gonna determine which step i am going to next.
 
 
 
